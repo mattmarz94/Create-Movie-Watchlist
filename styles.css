@@ -5,6 +5,8 @@ body{
     max-width: 400px;
 }
 
+/* Nav styling */
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -26,16 +28,20 @@ nav{
 }
 
 .film-header h2{
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
 .film-header a{
     text-decoration: none;
-    font-size: .85rem;
+    font-size: .5rem;
     font-weight: bold;
 }
 
+/* form styling */
+
 form {
+    display: flex;
+    align-items: center;
     position: relative;
     top: -15px;
     z-index: 1;
@@ -48,11 +54,13 @@ form {
 
 form i{
     color: #6B7280;
-    font-size: .85em;
+    font-size: .75em;
+    padding-right: .2em;
 }
 
 #user-input{
     width: 70%;
+    font-size: .75rem;
     text-align: start;
     border: none;
 }
@@ -63,10 +71,13 @@ form i{
 
 #search-btn{
     border: none;
+    font-size: .75rem;
     color: #6B7280;
     background-color: white;
     cursor: pointer;
 }
+
+/* Movie icon & text */
 
 .movies-container{
     text-align: center;
@@ -81,3 +92,5 @@ form i{
     padding-top: 1em;
     color: #D1D5DB;
 }
+
+/* Rendered movies styling */
