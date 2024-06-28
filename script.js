@@ -52,7 +52,7 @@ function renderMovies(){
                     <p class ="movie-runtime">${movie.Runtime}</p>
                     <p class ="movie-genre">${movie.Genre}</p>
                     <i class="fa-solid fa-circle-plus" data-watchlist=${movie.imdbID}></i>
-                    <p class="watchlist">Watchlist</p>
+                    <p class="watchlist" data-watchlist=${movie.imdbID}>Watchlist</p>
                 </div>
                 <div class ="movie-plot-container">
                     <p class="movie-plot">${movie.Plot}</p>

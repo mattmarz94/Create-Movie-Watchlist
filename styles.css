@@ -94,3 +94,62 @@ form i{
 }
 
 /* Rendered movies styling */
+.rendered-movies-container{
+    display: flex;
+    align-items: center;
+    margin: 1em 2em;
+}
+
+.rendered-movies-container img{
+    height: 150px;
+    min-width: 100px;
+}
+
+.title-container,
+.time-genre-add-container,
+.movie-plot-container{
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+}
+
+.title-container h2{
+    font-size: .75rem;
+    padding-right: 1em;
+}
+
+.title-container i{
+    font-size: .5rem;
+    padding-right: .3em;
+    color: rgb(255, 196, 46);
+}
+
+.title-container p{
+    font-size: .65rem;
+}
+
+.time-genre-add-container p{
+    font-size: .5rem;
+    padding-right: 1em;
+}
+
+.time-genre-add-container i{
+    font-size: .5rem;
+    padding-right: .3em;
+    cursor: pointer;
+}
+
+.time-genre-add-container .watchlist{
+    cursor: pointer;
+}
+
+.movie-plot{
+    font-size: .75rem;
+    color: #797a7a;
+    text-align: start;
+}
+
+hr{
+    margin: 0 1em;
+    color: #797a7a;
+}
