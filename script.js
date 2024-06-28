@@ -11,7 +11,9 @@ function handleMovieInfo(movie){
     const moviesIds = movie.map(m => m.imdbID)
 
     moviesIds.forEach(id =>{
-        
+        if(!moviesArray.some(function (film){
+            return film.Title === film.Title
+        }))
         fetch(`http://www.omdbapi.com/?apikey=e099eae9&i=${id}`)
             .then(res => res.json())
             .then(data => {
@@ -63,4 +65,23 @@ function renderMovies(){
         `
     }
     moviesContainer.innerHTML = renderedMoviesHtml
+}
+
+document.addEventListener('click', (e) => {
+    addToWatchlist(e.target.dataset.watchlist)
+})
+
+function addToWatchlist(id){
+    for (let movie of moviesArray){
+        if (movie.imdbID === id){
+            if(!movieWatchlist.some(film => film.Title === movie.Title))
+                movieWatchlist.push(movie)
+                alert("added to watchlist")
+                updateWatchlist()
+        }
+    }
+}
+
+function updateWatchlist(){
+    localStorage.setItem("watchlist", JSON.stringify(movieWatchlist))
 }
