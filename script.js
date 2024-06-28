@@ -1,13 +1,12 @@
 // API Key e099eae9
 
 const movieForm = document.querySelector("#movie-search-form")
-const searchBtn = document.getElementById("search-btn")
+const moviesContainer = document.getElementById('movies-container')
 
 let moviesArray = []
 let movieWatchlist = []
 
 function handleMovieInfo(movie){
-    moviesArray = []
     
     const moviesIds = movie.map(m => m.imdbID)
 
@@ -15,11 +14,13 @@ function handleMovieInfo(movie){
         
         fetch(`http://www.omdbapi.com/?apikey=e099eae9&i=${id}`)
             .then(res => res.json())
-            .then(data => console.log(data))
-    })
-
-
-
+            .then(data => {
+                
+                moviesArray.push(data)
+                
+            })
+        })
+        renderMovies()
 }
 
 movieForm.addEventListener("submit", (e) => {
@@ -32,6 +33,34 @@ movieForm.addEventListener("submit", (e) => {
                     
             handleMovieInfo(data.Search)
         })
-                
-
 })
+
+function renderMovies(){
+    let renderedMoviesHtml = ''
+
+    for(let movie of moviesArray) {
+        renderedMoviesHtml += `
+        <div class="rendered-movies-container">
+            <img src = "${movie.Poster}">
+            <div class="movie-container">
+                <div class="title-container">
+                    <h2>${movie.Title}</h2>
+                    <i class="fa-solid fa-star"></i>
+                    <p class="movie-rating">${movie.imdbRating}</p>
+                </div>
+                <div class = "time-genre-add-container">
+                    <p class ="movie-runtime">${movie.Runtime}</p>
+                    <p class ="movie-genre">${movie.Genre}</p>
+                    <i class="fa-solid fa-circle-plus" data-watchlist=${movie.imdbID}></i>
+                    <p class="watchlist">Watchlist</p>
+                </div>
+                <div class ="movie-plot-container">
+                    <p class="movie-plot">${movie.Plot}</p>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        `
+    }
+    moviesContainer.innerHTML = renderedMoviesHtml
+}
