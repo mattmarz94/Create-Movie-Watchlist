@@ -1,216 +1,215 @@
-body{
-    margin: 0 auto;
-    padding: 0;
-    font-family: "Inter", sans-serif;
-    max-width: 400px;
-    border: 1px solid black;
-    min-height: 450px;
-    background-color: transparent;
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  max-width: 400px;
+  border: 1px solid black;
+  min-height: 450px;
+  background-color: transparent;
 }
 
 /* Nav styling */
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 150px;
-    padding: 0 2em;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 150px;
+  padding: 0 2em;
 }
 
-.film-header{
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , url(/images/movie-posters.png);
-    background-position: 0 10%;
-    background-repeat: no-repeat;
-    background-size: cover;
+.film-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/movie-posters.png);
+  background-position: 0 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .film-header a,
-.film-header h2{
-    color: white;
+.film-header h2 {
+  color: white;
 }
 
-.film-header h2{
-    font-size: 1.75rem;
+.film-header h2 {
+  font-size: 1.75rem;
 }
 
-.film-header a{
-    text-decoration: none;
-    font-size: .5rem;
-    font-weight: bold;
+.film-header a {
+  text-decoration: none;
+  font-size: 0.5rem;
+  font-weight: bold;
 }
 
 /* form styling */
 
 form {
-    display: flex;
-    align-items: center;
-    position: relative;
-    top: -15px;
-    z-index: 1;
-    border: 1px solid #D1D5DB;
-    padding: .3em;
-    margin: 0 2em;
-    border-radius: 5px;
-    background-color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -15px;
+  z-index: 1;
+  border: 1px solid #d1d5db;
+  padding: 0.3em;
+  margin: 0 2em;
+  border-radius: 5px;
+  background-color: white;
 }
 
-form i{
-    color: #6B7280;
-    font-size: .75em;
-    padding-right: .2em;
+form i {
+  color: #6b7280;
+  font-size: 0.75em;
+  padding-right: 0.2em;
 }
 
-#user-input{
-    width: 70%;
-    font-size: .75rem;
-    text-align: start;
-    border: none;
+#user-input {
+  width: 70%;
+  font-size: 0.75rem;
+  text-align: start;
+  border: none;
 }
 
 *:focus {
-    outline: none;
+  outline: none;
 }
 
 input:focus,
-textarea:focus{
-    background-color: white;
+textarea:focus {
+  background-color: white;
 }
 
-#user-input:focus{
-    outline: none;
+#user-input:focus {
+  outline: none;
 }
 
-#search-btn{
-    border: none;
-    font-size: .75rem;
-    color: #6B7280;
-    background-color: white;
-    cursor: pointer;
+#search-btn {
+  border: none;
+  font-size: 0.75rem;
+  color: #6b7280;
+  background-color: white;
+  cursor: pointer;
 }
 
 /* Movie icon & text */
 
-
-#movie-icon{
-    font-size: 5rem;
-    color: red;
+#movie-icon {
+  font-size: 5rem;
+  color: red;
 }
 
 #movie-icon,
-.welcome-msg{
-    padding-top: 1em;
-    color: #D1D5DB;
+.welcome-msg {
+  padding-top: 1em;
+  color: #d1d5db;
 }
 
 /* Rendered movies styling */
-.rendered-movies-container{
-    display: flex;
-    align-items: center;
-    margin: 1em 2em;
+.rendered-movies-container {
+  display: flex;
+  align-items: center;
+  margin: 1em 2em;
 }
 
-.rendered-movies-container img{
-    height: 150px;
-    min-width: 100px;
+.rendered-movies-container img {
+  height: 150px;
+  min-width: 100px;
 }
 
 .title-container,
 .time-genre-add-container,
-.movie-plot-container{
-    display: flex;
-    align-items: center;
-    padding-left: 1em;
+.movie-plot-container {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
 }
 
-.title-container h2{
-    font-size: .75rem;
+.title-container h2 {
+  font-size: 0.75rem;
+  padding-right: 1em;
+}
+
+.title-container i {
+  font-size: 0.5rem;
+  padding-right: 0.3em;
+  color: rgb(255, 196, 46);
+}
+
+.title-container p {
+  font-size: 0.65rem;
+}
+
+.time-genre-add-container p {
+  font-size: 0.5rem;
+  padding-right: 1em;
+}
+
+.time-genre-add-container i {
+  font-size: 0.5rem;
+  padding-right: 0.3em;
+  cursor: pointer;
+}
+
+.time-genre-add-container .watchlist {
+  cursor: pointer;
+}
+
+.movie-plot {
+  font-size: 0.7rem;
+  color: #797a7a;
+  text-align: start;
+}
+
+hr {
+  margin: 0 1em;
+  color: #797a7a;
+}
+
+.pop-up {
+  position: fixed;
+  top: 50%;
+  bottom: 50%;
+  left: 30%;
+  border: 2px solid black;
+  padding: 2em;
+  background-color: wheat;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 401px) {
+  body {
+    max-width: 600px;
+  }
+
+  nav {
+    min-height: 200px;
+  }
+
+  /* Rendered movies styling */
+  .rendered-movies-container img {
+    height: 200px;
+    min-width: 150px;
+  }
+
+  .title-container h2 {
+    font-size: 1.2rem;
     padding-right: 1em;
-}
+  }
 
-.title-container i{
-    font-size: .5rem;
-    padding-right: .3em;
-    color: rgb(255, 196, 46);
-}
+  .title-container i {
+    font-size: 0.65rem;
+  }
 
-.title-container p{
-    font-size: .65rem;
-}
+  .title-container p {
+    font-size: 0.85rem;
+  }
 
-.time-genre-add-container p{
-    font-size: .5rem;
-    padding-right: 1em;
-}
+  .time-genre-add-container p,
+  .time-genre-add-container i {
+    font-size: 0.75rem;
+  }
 
-.time-genre-add-container i{
-    font-size: .5rem;
-    padding-right: .3em;
-    cursor: pointer;
-}
-
-.time-genre-add-container .watchlist{
-    cursor: pointer;
-}
-
-.movie-plot{
-    font-size: .7rem;
-    color: #797a7a;
-    text-align: start;
-}
-
-hr{
-    margin: 0 1em;
-    color: #797a7a;
-}
-
-.pop-up{
-    position: fixed;
-    top: 50%;
-    bottom: 50%;
-    left: 30%;
-    border: 2px solid black;
-    padding: 2em;
-    background-color: wheat;
-    display: flex;
-    align-items: center;
-}
-
-@media (min-width: 401px){
-
-    body{
-        max-width: 600px;
-    }
-
-    nav{
-        min-height: 200px;
-    }
-    
-    /* Rendered movies styling */
-    .rendered-movies-container img{
-        height: 200px;
-        min-width: 150px;
-    }
-
-    .title-container h2{
-        font-size: 1.2rem;
-        padding-right: 1em;
-    }
-
-    .title-container i{
-        font-size: .65rem;
-    }
-
-    .title-container p{
-        font-size: .85rem;
-    }
-
-    .time-genre-add-container p,
-    .time-genre-add-container i{
-        font-size: .75rem;
-    }
-
-    .movie-plot{
-        font-size: .85rem;
-    }
+  .movie-plot {
+    font-size: 0.85rem;
+  }
 }
