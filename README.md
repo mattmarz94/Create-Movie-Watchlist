@@ -1,5 +1,4 @@
 # Create-Movie-Watchlist
-
 This application will search the Movie Database API for any movie you may think of, and if it is not available it will provide a message. Once the movies are rendered you may add (+) any movie you would like to your "watchlist". You can go to your watchlist and find your favorite movies you would love to watch! Once done you can simply remove the movie from your watchlist by clicking the (-) button.
 
 Creating this application was a great opportuninty to practice and fine tune these programming concepts and practices below.
