@@ -7,37 +7,41 @@ const watchlistContainer = document.querySelector(".watchlist-container")
 let moviesArray = []
 let movieWatchlist = []
 
-function handleMovieInfo(movie){
-    
-    const moviesIds = movie.map(m => m.imdbID)
+async function handleMovieInfo(movie) {
+    const moviesIds = movie.map(m => m.imdbID);
 
-    moviesIds.forEach(id =>{
-        if(!moviesArray.some( film => film.Title === film.Title )){
-            fetch(`http://www.omdbapi.com/?apikey=e099eae9&i=${id}`)
-                .then(res => res.json())
-                .then(data => {
-                    
-                    moviesArray.push(data)
-                    
-                })
+    await Promise.all(moviesIds.map(async id => {
+        if (!moviesArray.some(film => film.Title === film.Title)) {
+            try {
+                const response = await fetch(`http://www.omdbapi.com/?apikey=e099eae9&i=${id}`);
+                const data = await response.json();
+                moviesArray.push(data);
+            } catch (error) {
+                console.error('Error fetching movie data:', error);
             }
-        })
-        renderMovies()
+        }
+    }));
+
+    renderMovies();
 }
 
-if(movieForm){
-    movieForm.addEventListener("submit", (e) => {
-        e.preventDefault()
-        const userInput = document.getElementById("user-input")
 
-        fetch(`http://www.omdbapi.com/?apikey=e099eae9&s=${userInput.value}`)
-            .then( res => res.json() )
-            .then( data => {
-                        
-                handleMovieInfo(data.Search)
-            })
-    })
+if (movieForm) {
+    movieForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const userInput = document.getElementById("user-input");
+
+        try {
+            const response = await fetch(`http://www.omdbapi.com/?apikey=e099eae9&s=${userInput.value}`);
+            const data = await response.json();
+            
+            handleMovieInfo(data.Search);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    });
 }
+
 
 function renderMovies(){
     let renderedMoviesHtml = ''
