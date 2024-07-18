@@ -7,10 +7,9 @@ Creating this application was a great opportuninty to practice and fine tune the
 JavaScript and Asynchronous Programming
 
 Local Storage Operations:
-Usage: Storing, retrieving, and removing movie data.
-In-Depth: Local storage allows web applications to store data locally within the user's browser, enabling persistent data even after the browser is closed. By utilizing local storage, I could save user-specific watchlists, making the application stateful and user-friendly.
+Usage: Storing, retrieving, and removing movie data. The local storage allows web applications to store data locally within the user's browser, enabling persistent data even after the browser is closed. By utilizing local storage, I could save user-specific watchlists, making the application stateful and user-friendly.
 
-Callback Functions: To handle asynchronous code, I extensively used callback functions. These functions are crucial for managing tasks that take an indeterminate amount of time to complete, such as API calls or timers. By passing a function as an argument, I ensured that certain actions only executed once the previous ones were finished, preventing potential issues with timing and data availability.
+Callback Functions: To handle asynchronous code, I used callback functions. These functions are crucial for managing tasks that take an indeterminate amount of time to complete, such as API calls or timers. By passing a function as an argument, I ensured that certain actions only executed once the previous ones were finished, preventing potential issues with timing and data availability.
 
 Promises and Async/Await: Building on the foundation of callbacks, I worked with promises to streamline asynchronous operations. Promises represent the eventual completion (or failure) of an asynchronous operation and its resulting value. Using async and await, I wrote cleaner and more readable asynchronous code. This syntactic sugar allowed me to handle promises in a way that resembles synchronous code, significantly reducing complexity and improving error handling.
 
