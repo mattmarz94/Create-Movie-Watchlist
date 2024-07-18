@@ -175,3 +175,42 @@ hr{
     display: flex;
     align-items: center;
 }
+
+@media (min-width: 401px){
+
+    body{
+        max-width: 600px;
+    }
+
+    nav{
+        min-height: 200px;
+    }
+    
+    /* Rendered movies styling */
+    .rendered-movies-container img{
+        height: 200px;
+        min-width: 150px;
+    }
+
+    .title-container h2{
+        font-size: 1.2rem;
+        padding-right: 1em;
+    }
+
+    .title-container i{
+        font-size: .65rem;
+    }
+
+    .title-container p{
+        font-size: .85rem;
+    }
+
+    .time-genre-add-container p,
+    .time-genre-add-container i{
+        font-size: .75rem;
+    }
+
+    .movie-plot{
+        font-size: .85rem;
+    }
+}
