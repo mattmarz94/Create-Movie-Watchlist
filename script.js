@@ -76,7 +76,7 @@ moviesContainer.addEventListener('click', (e) => {
 function addToWatchlist(id){
     for (let movie of moviesArray){
         if (movie.imdbID === id){
-            if(!movieWatchlist.some(film => film.Title === movie.Title))
+            if(!movieWatchlist.some(film => film.Title === movie.Title)){
                 movieWatchlist.push(movie)
                 const popup = document.createElement("div")
                 popup.classList.add("pop-up")
@@ -88,7 +88,19 @@ function addToWatchlist(id){
                     popup.remove()
                 }, 2000);
                 updateWatchlist()
+            }else{
+                const popup = document.createElement("div")
+                popup.classList.add("pop-up")
+                popup.textContent = "Movie already added to watchlist!"
+                document.body.appendChild(popup);
+
+                setTimeout(() => {
+                    popup.remove()
+                }, 2000);
+                updateWatchlist()
+            }
         }
+        
     }
 }
 

@@ -3,6 +3,9 @@ body{
     padding: 0;
     font-family: "Inter", sans-serif;
     max-width: 400px;
+    border: 1px solid black;
+    min-height: 450px;
+    background-color: transparent;
 }
 
 /* Nav styling */
@@ -65,6 +68,15 @@ form i{
     border: none;
 }
 
+*:focus {
+    outline: none;
+}
+
+input:focus,
+textarea:focus{
+    background-color: white;
+}
+
 #user-input:focus{
     outline: none;
 }
@@ -79,12 +91,10 @@ form i{
 
 /* Movie icon & text */
 
-#movies-container{
-    text-align: center;
-}
 
 #movie-icon{
     font-size: 5rem;
+    color: red;
 }
 
 #movie-icon,
